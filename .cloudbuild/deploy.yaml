@@ -8,6 +8,11 @@ steps:
     args: ['run', 'cloud-secrets']
     env:
     - 'PROJECT_ID=$PROJECT_ID'
+  - name: 'node'
+    entrypoint: npm
+    args: ['run', 'HEAD']
+    env:
+    - 'BUILD_ID=$BUILD_ID'
   - name: node
     entrypoint: npm
     args: ['run', 'build']
